@@ -1,6 +1,18 @@
 enum MusicSite { None, Mix, MyFreeMp3, Baidu, KuGou, KuWo, MiGu, Netease, QQ }
 enum MusicFormat { LQ, PQ, HQ, SQ, ZQ24 }
 
+extension MusicSiteExtension on MusicSite {
+  String get name {
+    return this.toString().split(".").last;
+  }
+}
+
+extension MusicFormatExtension on MusicFormat {
+  String get name {
+    return this.toString().split(".").last;
+  }
+}
+
 const allSite = [
   MusicSite.MyFreeMp3,
   MusicSite.Baidu,
